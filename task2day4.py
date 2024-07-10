@@ -9,7 +9,7 @@ from sklearn.pipeline import Pipeline
 import streamlit as st
 
 # Load the dataset
-df = pd.read_csv("C:/Users/hovii/OneDrive/سطح المكتب/tri/insurance.csv")
+df = pd.read_csv("insurance.csv")  # Using relative path
 
 # Drop the 'region' column
 df = df.drop(columns=['region'])
@@ -63,8 +63,3 @@ if st.button("Predict"):
     # Preprocess user data
     user_pred = pipeline.predict(user_data)
     st.write(f"Predicted Insurance Charge: ${user_pred[0]:.2f}")
-
-
-
-
-
